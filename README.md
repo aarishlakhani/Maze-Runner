@@ -1,122 +1,85 @@
-Maze Runner
+# Maze Runner
 
 Maze Runner is a first-person Unity game where players navigate through a maze, solve challenges, and complete the level while being timed. The game includes interactive features like doors that require keys, a leaderboard system for tracking scores, and a pause menu for seamless gameplay.
 
-Features
+## Features
 
-1. Level 1 Gameplay
+### Level 1 Gameplay
+- Navigate a maze to find a key and unlock a door.
+- **Door interaction**: Press `T` when near the door to open it if the key is collected.
+- **Timer**: Tracks and displays the elapsed time in the format `Time: mm:ss` at the top-right corner of the screen.
+- **Delay**: The door triggers a delay before loading the next scene.
 
-Navigate a maze to find a key and unlock a door.
+### Leaderboard System
+- After completing the level, players are taken to a SubmitName scene.
+- Players input a 3-character name, which is saved along with their recorded time.
+- The Leaderboard scene displays the names and times of all players.
 
-Door interaction: Press T when near the door to open it if the key is collected.
+### Pause Menu
+- Integrated into the main scene (Level 1).
+- Allows players to pause the game and access options.
 
-Timer: Tracks and displays the elapsed time in the format Time: mm:ss at the top-right corner of the screen.
+### UI and Design
+- **TextMeshPro** is used for all UI elements to ensure a polished look.
+- Full-screen and normal screen compatibility for all UI prompts.
 
-Delay: The door triggers a delay before loading the next scene.
+## Scenes
+- **MainMenu (0)**: Start the game.
+- **Level 1 (1)**: Main gameplay.
+- **Leaderboard (2)**: View player scores.
+- **SubmitName (3)**: Input your name after completing the level.
 
-2. Leaderboard System
+## Game Design
 
-After completing the level, players are taken to a SubmitName scene.
+### Timer Script (GameTimer)
+- Increments time using `Time.deltaTime` and calculates minutes and seconds.
 
-Players input a 3-character name, which is saved along with their recorded time.
+### Door Interaction
+- Players can open doors by pressing `T` if they have the required key.
 
-The Leaderboard scene displays the names and times of all players.
+### Name Entry Issue
+- Resolved UI scaling issue where the name entry prompt didn’t display correctly in full-screen mode.
 
-3. Pause Menu
+## Development Details
 
-Integrated into the main scene (Level 1).
+- **Engine**: Unity
+- **UI Framework**: TextMeshPro
 
-Allows players to pause the game and access options.
+### Build Settings:
+- **MainMenu**: Scene 0
+- **Level 1**: Scene 1
+- **Leaderboard**: Scene 2
+- **SubmitName**: Scene 3
 
-4. UI and Design
+## How to Play
 
-TextMeshPro is used for all UI elements to ensure a polished look.
+1. Start the game from the **Main Menu**.
+2. Navigate the maze in **Level 1** to find the key.
+3. Open the door by pressing `T` and proceed to the **SubmitName** scene.
+4. Enter your 3-character name to save your score.
+5. View your score on the **Leaderboard**.
 
-Full-screen and normal screen compatibility for all UI prompts.
+## Installation
 
-5. Scenes
+1. Open the project in Unity.
+2. Build and run the game.
 
-MainMenu (0): Start the game.
+## Known Issues
+- Full-screen compatibility for UI has been addressed.
+- Further optimizations may be required for larger mazes and additional levels.
 
-Level 1 (1): Main gameplay.
+## Future Enhancements
+- Add more levels with increasing difficulty.
+- Introduce enemies or obstacles within the maze.
+- Implement power-ups or collectibles.
+- Expand the leaderboard to include global rankings.
 
-Leaderboard (2): View player scores.
+## Credits
+- **Developer**: Aarish Akbar Lakhani
+- **Technologies Used**: Unity, TextMeshPro
 
-SubmitName (3): Input your name after completing the level.
-
-Game Design
-
-Timer Script (GameTimer): Increments time using Time.deltaTime and calculates minutes and seconds.
-
-Door Interaction: Players can open doors by pressing T if they have the required key.
-
-Name Entry Issue: Resolved UI scaling issue where the name entry prompt didn’t display correctly in full-screen mode.
-
-Development Details
-
-Engine: Unity
-
-UI Framework: TextMeshPro
-
-Build Settings:
-
-MainMenu: Scene 0
-
-Level 1: Scene 1
-
-Leaderboard: Scene 2
-
-SubmitName: Scene 3
-
-How to Play
-
-Start the game from the Main Menu.
-
-Navigate the maze in Level 1 to find the key.
-
-Open the door by pressing T and proceed to the SubmitName scene.
-
-Enter your 3-character name to save your score.
-
-View your score on the Leaderboard.
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/<your-username>/maze-runner.git
-
-Open the project in Unity.
-
-Build and run the game.
-
-Known Issues
-
-Full-screen compatibility for UI has been addressed.
-
-Further optimizations may be required for larger mazes and additional levels.
-
-Future Enhancements
-
-Add more levels with increasing difficulty.
-
-Introduce enemies or obstacles within the maze.
-
-Implement power-ups or collectibles.
-
-Expand the leaderboard to include global rankings.
-
-Credits
-
-Developer: Aarish Akbar Lakhani
-
-Technologies Used: Unity, TextMeshPro
-
-Contact
-
+## Contact
 For questions or suggestions, feel free to reach out:
 
-Email: aarishlakhani2@gmail.com
-
-GitHub: https://github.com/aarishlakhani
-
+- **Email**: aarishlakhani2@gmail.com
+- **GitHub**: [https://github.com/aarishlakhani](https://github.com/aarishlakhani)
